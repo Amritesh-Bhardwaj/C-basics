@@ -10,7 +10,9 @@ void findShortestPath(int cr, int cc, int rr, int rc, char path[], int pathLen, 
         if (pathLen < *shortestPathLen)
         {
             *shortestPathLen = pathLen;
-            strcpy(shortestPath, path);
+           for (int i = 0; i <= pathLen; i++) {
+            shortestPath[i] = path[i];
+        }
         }
         return;
     }
