@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 
 void findShortestPath(int cr, int cc, int er, int ec, char path[], int pathLen, char shortestPath[], int *shortestPathLen) {
     if (cr == er && cc == ec) { // base case: reached the end point
@@ -49,11 +48,11 @@ int main() {
 
     char path[n + m]; // buffer to store the current path
     char shortestPath[n + m]; // buffer to store the shortest path
-    int shortestPathLen = INT_MAX; // initialize the shortest path length to a large value
+    int shortestPathLen = 1000; // initialize the shortest path length to a large value
 
     findShortestPath(startX, startY, endX, endY, path, 0, shortestPath, &shortestPathLen);
 
-    if (shortestPathLen == INT_MAX) {
+    if (shortestPathLen == 1000) {
         printf("No path found!\n");
     } else {
         printf("Shortest path: %s\n", shortestPath);
